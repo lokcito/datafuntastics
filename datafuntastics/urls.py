@@ -18,8 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path("", include("librarium.urls")), #---- Aplicacion principal
     path("graphify/", include("graphify.urls")),
-    path("librarium/", include("librarium.urls")),
     path("sheetmarker/", include("sheetmarker.urls")),
     path('admin/', admin.site.urls),
 ]
