@@ -15,7 +15,10 @@ def v_index(request):
 
 def v_macro(request):
     context = {
-        "static_values": static_values
+        "static_values": static_values,
+        "features": ["Soporta xls, xlsx, formatos libres.",
+            "Permite importar modificar y exportar.",
+            "Cantidad de ejecuciones ilimitadas."]
     }
     return render(request, "sheetmarker/macros.html", context)
 
