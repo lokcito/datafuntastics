@@ -7,6 +7,19 @@
         <h5 class="card-title">Reportes con Excel</h5>
         <p class="card-text">Genera reportes avanzados en formato Excel de manera rápida y sencilla.</p>
         <button class="btn btn-primary">Ver más</button>
+
+        <ul>
+          {% for abc in features %}
+          <li>{{ abc }}</li>
+          {% endfor %}
+        </ul>
+        
+        <em>
+          {% for abc in features %}
+          <span class="badge bg-secondary">#{{ abc }}</span>
+          {% endfor %}
+        </em>
+
     </div>
 </div>
 {% endblock %}

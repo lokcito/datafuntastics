@@ -18,19 +18,33 @@ def v_macro(request):
         "static_values": static_values,
         "features": ["Soporta xls, xlsx, formatos libres.",
             "Permite importar modificar y exportar.",
-            "Cantidad de ejecuciones ilimitadas."]
+            "Cantidad de ejecuciones ilimitadas.", 
+            "Envia tus reportes por email",
+            "Edita documentos en linea"
+            ]
     }
     return render(request, "sheetmarker/macros.html", context)
 
 def v_powerbi(request):
     context = {
-        "static_values": static_values
+        "static_values": static_values,
+        "features": ["Caract1", "Caract2", "Pruebas 1", 
+                    "Pruebas 2" ]
     }
     return render(request, "sheetmarker/powerbi.html", context)
 
 def v_analitica(request):
     context = {
-        "static_values": static_values
+        "static_values": static_values,
+        "promos": [
+            {
+                "title": "10% Off", 
+                "color": "bg-primary", 
+                "rules": ["Regla 1", "Regla 2"]
+            },
+            {"title": "30% Off", "color": "bg-success"},
+            {"title": "50% Off", "color": "bg-danger"}
+        ]
     }
     return render(request, "sheetmarker/analitica.html", context)
 
